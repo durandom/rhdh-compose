@@ -1,0 +1,19 @@
+auth:
+  environment: development
+  providers:
+    guest:
+      dangerouslyAllowOutsideDevelopment: true
+
+backend:
+  baseUrl: ${BASE_URL}:7007
+  https: true
+  listen:
+    port: 7007
+  csp:
+    connect-src:
+      - "'self'"
+      - 'http:'
+      - 'https:'
+  cors:
+    methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
+    credentials: true
